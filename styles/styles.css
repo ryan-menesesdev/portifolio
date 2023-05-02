@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;1,600&display=swap'); /*importações das fontes usadas no figma pelo google fonts > ambiente com mais de 1000 fontes licenciadas de forma gratuita*/
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat&display=swap');
+
+:root{ /* elemento que organiza as variáveis do css > feita a partir de dois hifens + denominação : propriedade > armazena informaçãoes que podem ser mudadas rapidamente = variável*/
+    --cor-primaria: #000000;
+    --cor-secundaria: #F6F6F6;
+    --cor-terciaria: #22D4FD;
+    --cor-hover: #272727;
+
+    --fonte-primaria:'Krona One', sans-serif;
+    --fonte-secundaria: 'Montserrat', sans-serif;
+}
+
+*{ /* "*" significa a seleção de todos os conteúdos da página, nesse caso ele pega todos os conteúdo e retira seu "padding" e "margin" */
+    margin: 0px;
+    padding: 0px;
+}
+/*reset css é uma forma de resetar o css para remover padrões pré estabelecidos por navegadores = limpar*/
+/*box model é a estrutura de cada elemento do css > formado por margin, border e padding*/
+
+body { /*são seletores, formas de chamar que elemento deve ser alterado*/
+    /* height: 100vh; "vh" = viewport height > 100% de qualquer tela*/
+    box-sizing: border-box; /*fixa os fihos do body dentro de si > content-box, border box*/
+    background-color: var(--cor-primaria);
+    color: var(--cor-secundaria);
+}
+
+a {
+    text-decoration: none;
+}
+
+.cabecalho{
+    padding: 2% 0% 0% 15%;   
+}
+
+.cabecalho__menu{
+    display: flex;
+    gap: 80px;
+}
+
+.cabecalho__menu__botao{
+    color: var(--cor-terciaria);
+    font-family: var(--fonte-secundaria);
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+
+.apresentacao{
+    padding: 5% 15%;
+    display: flex; /*configura elementos dentro de "apresentacao" para se organizarem em linhas horizontal, ou coluna vertical = flex-direction > busca tornar o layout mais flexível*/
+    align-items: center; /*centraliza os elementos de "apresentacao" de acordo com o elemento de maior tamanho no main*/
+    justify-content: space-between;
+    gap: 82px;
+}
+
+.apresentacao__conteudo{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.apresentacao__conteudo__titulo{
+    font-size: 2.25rem; /*px n é adequado, pq n se adequado ao tamanho especifico do usuario > usar REM = valor usado para se adaptar ao valor dito no html > 1 rem = 16px > 36px = 2,25rem*/
+    font-family: var(--fonte-primaria);
+    font-weight: 400;
+}
+
+.titulo-destaque {
+    color: var(--cor-terciaria);
+}
+
+.apresentacao__conteudo__texto{
+    font-size: 1.5rem;
+    font-family: var(--fonte-secundaria);
+}
+
+.apresentacao__links{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+}
+
+.apresentacao__links__subtitulo{
+    font-family: var(--fonte-primaria);
+    font-weight: 400;
+    font-size: 1.5rem;
+}
+
+.apresentacao__links__botao {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    width: 50%;
+    background-color: var(--cor-primaria);
+    border: 2px solid var(--cor-terciaria);
+    text-align: center;
+    border-radius: 8px;
+    font-size: 1.5rem;
+    font-family: var(--fonte-secundaria);
+    color: var(--cor-secundaria);
+    padding: 21.5px 0;
+    font-weight: 600;
+}
+
+.apresentacao__links__botao:hover{
+    background-color: var(--cor-hover);
+}
+
+.apresentacao__imagem{
+    width: 50%;
+}
+
+.rodape{
+    background-color: var(--cor-terciaria);
+    color: var(--cor-primaria);
+    font-size: 1.5rem;
+    font-family: var(--fonte-secundaria);
+    padding: 24px;
+    font-weight: 400;
+    text-align: center;
+}
+
+@media (max-width: 1200px) {
+    .cabecalho{
+        padding: 10%;
+    }
+
+    .cabecalho__menu{
+        justify-content: center;
+    }
+
+    .apresentacao{
+        flex-direction: column-reverse;
+        padding: 5%;
+    }
+
+    .apresentacao__conteudo{
+        width: auto;
+    }
+}

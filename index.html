@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- usado para indicar configurações do navegador EDGE da microsoft > versão mais recente para o navegador-->
+    <meta name="viewport" content="width=device-width, initial-scale= 1.0"> <!--redimensiona objetos automaticamente de acordo com o dispositivo utilizado-->
+    <link rel="stylesheet" href="./styles/styles.css">
+    <title>Portifólio foda do Ryan!</title>
+</head>
+
+<body>
+    <header class="cabecalho">
+        <nav class="cabecalho__menu"> <!-- "nav" utilizado para identificar "links" para navegação de páginas PAUSA usar "flex" so nos elementos pai-->
+            <a class="cabecalho__menu__botao" href="./index.html">Home</a>
+            <a class="cabecalho__menu__botao" href="./main.html" target="_blank" rel="noopener noreferrer">Sobre mim</a>
+            <!-- <a class="cabecalho__menu__botao" href="./curriculo.html" target="_blank" rel="noopener noreferrer">Currículo</a> -->
+        </nav>
+    </header>
+
+    <main class="apresentacao">
+        <section class="apresentacao__conteudo">
+            <h1 class="apresentacao__conteudo__titulo">Eleve seu negócio digital a outro nível <strong class="titulo-destaque">com um Front-end de qualidade!</strong></h1> <!--as "classes" são formas de organizar/estilizar diferentes aspectos, com um só nome > todos os titulos que precisarem de destaque = classe "titulo-destaque"-->
+            <p class="apresentacao__conteudo__texto">Olá! Sou Joana Santos, desenvolvedora Front-end com especialidade em React, HTML e CSS. Ajudo pequenos negócios e designers a colocarem em prática boas ideias. Vamos conversar?</p>
+            <!--a tag 'span' serve para marcar textos, como uma alternativa mais flexível-->   
+            <div class="apresentacao__links"> <!--serve como uma "section", mas de forma mais especifica, mais simples-->
+                <h2 class="apresentacao__links__subtitulo">Acesse minhas redes:</h2>
+
+                <a class="apresentacao__links__botao" href="#">
+                    <img src="./assets/github.png">
+                    GitHub
+                </a> <!--indica links > "button" serve para envio de formulários-->
+
+                <a class="apresentacao__links__botao" href="#">
+                    <img src="./assets/linkedin.png">
+                    Linkedin
+                </a>
+
+                <a class="apresentacao__links__botao" href="#">
+                    <img src="./assets/twitch.png">
+                    Twitch
+                </a>
+            </div>
+        </section>
+        <img class="apresentacao__imagem" src="./assets/Rectangle 47.png" alt="Foto da Joana Santos programando">
+    </main>
+
+    <footer class="rodape">
+        <p>Desenvolvido por Alura.</p>
+    </footer> 
+</body>
+
+</html>
+
+<!--lorem ipsum-->
